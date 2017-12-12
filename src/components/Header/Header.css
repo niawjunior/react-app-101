@@ -1,5 +1,4 @@
 /*! bulma.io v0.6.1 | MIT License | github.com/jgthms/bulma */
-@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -6466,3 +6465,17 @@ label.panel-block {
 .footer {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
+
+h1, h2 {
+  font-weight: normal; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
+
+li {
+  display: inline-block;
+  margin: 0 10px; }
+
+a {
+  color: #42b983; }
