@@ -25,7 +25,7 @@ class Header extends Component {
                 <a className="navbar-item" href="http://bulma.io">
                 <span>MyCompany</span>
                 </a>
-                <div className="navbar-burger burger" onClick={this.handleClick}>
+                <div className={'navbar-burger burger '+menuActive} onClick={this.handleClick}>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -34,16 +34,16 @@ class Header extends Component {
 
             <div className={'navbar-end navbar-menu '+menuActive}>
                 <div className="navbar-item">
-                    <Link to="/" className="nav-item">Home</Link>
+                    <Link to="/" className="nav-item r-item">Home</Link>
                 </div>
                 <div className="navbar-item">
-                    <Link to="faq" className="nav-item">Features</Link>
+                    <Link to="faq" className="nav-item r-item">Features</Link>
                 </div>
                 <div className="navbar-item">
-                  <Link to="faq" className="nav-item">About</Link>
+                  <Link to="faq" className="nav-item r-item">About</Link>
                 </div>
                 <div className="navbar-item">
-                    <Link to="faq" className="nav-item">FAQ</Link>
+                    <Link to="faq" className="nav-item r-item">FAQ</Link>
                 </div>
                 <div className="navbar-item">
                     <div className="field is-grouped">
