@@ -48,7 +48,7 @@ class Header extends Component {
                 <div className="navbar-item">
                     <div className="field is-grouped">
                         <p className="control">
-                            <a className="button is-primary is-outlined" href="https://github.com/niawjunior/vue-app-101">
+                            <a className="button is-primary is-outlined" href="https://github.com/niawjunior/react-app-101">
                             <span className="icon">
                                 <i className="fa fa-github"></i>
                             </span>
