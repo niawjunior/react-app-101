@@ -2,7 +2,22 @@ import React, { Component } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 class Header extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = { isToggleOn: false};
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick() {
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }))
+    }
   render() {
+
+    let menuActive = this.state.isToggleOn ? 'is-active' : '';
     return (
       <div className="App">
         <nav className="navbar is-black has-shadow">
@@ -10,14 +25,14 @@ class Header extends Component {
                 <a className="navbar-item" href="http://bulma.io">
                 <span>MyCompany</span>
                 </a>
-                <div className="navbar-burger burger">
+                <div className="navbar-burger burger" onClick={this.handleClick}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
 
-            <div className="navbar-end navbar-menu">
+            <div className={'navbar-end navbar-menu '+menuActive}>
                 <div className="navbar-item">
                     <Link to="/" className="nav-item">Home</Link>
                 </div>
@@ -44,21 +59,6 @@ class Header extends Component {
                 </div>
             </div>
         </nav>
-
-
-        <footer className="footer is-primary">
-        <div className="container">
-            <div className="columns">
-            <div className="column">
-                <p>And this right here is a  spiffy footer, where you can push stuff.</p>
-            </div>
-            <div className="column has-text-right">
-                <a className="icon" href="#"><i className="fa fa-facebook"></i></a>
-                <a className="icon" href="#"><i className="fa fa-twitter"></i></a>
-            </div>
-            </div>
-        </div>
-        </footer>
       </div>
     );
   }
