@@ -6479,3 +6479,10 @@ li {
 
 a {
   color: #42b983; }
+
+footer {
+  background-color: #00d1b2 !important;
+  color: #ffffff; }
+  footer .icon {
+    color: #ffffff;
+    margin-left: 20px; }
